@@ -1,0 +1,21 @@
+<div class="container">
+
+  <ul class="mt-4">
+    <div class="row mb-4 pb-2 ">
+        <div class="col-2 filtro mr-4 ">
+            <app-filtros></app-filtros>
+        </div>
+     
+      <div class="pl-3 col-8">
+
+        <ng-container *ngFor="let juego of juegos" >
+          <a routerLink="/detalle/{{juego.id}}">
+
+                <img src="{{juego.img}}" alt="{{juego.name}}" class="imagenes zoom m-2">
+                <!-- <li>{{juego.name}}</li> -->
+          </a>  
+        </ng-container>
+      </div>
+    </div>
+  </ul>
+</div>
