@@ -1,0 +1,19 @@
+.unoss{
+    border: none;
+    font-size: 2em;
+    background-color: goldenrod;
+    background:top, #e1dd0a, #b8ac09;
+    background:-webkit-linear-gradient(top,#cbe10a, #b86609);
+    background: -moz-linear-gradient(top,#cbe10a, #b86609);
+    background: linear-gradient(top,#e1dd0a, #b86609);
+    text-shadow: 3px 3px 3p #000000;
+    box-shadow: 3px 5px 7px #000000;
+    border-radius: 5px;
+    width:300px ;
+    height: 200px;
+}
+.unoss:active{
+    background:-webkit-linear-gradient(top,#cbe10a, #b86609);
+    background:-moz-linear-gradient(top,#cbe10a, #b86609);
+    background: linear-gradient(top,#e1dd0a, #b86609);
+}
