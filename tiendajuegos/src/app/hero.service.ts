@@ -336,37 +336,62 @@ export class HeroService {
     ]
 }]
 
-public getGame() {
-  return this.productos;
-}
-public getNameGame() {
-  return this.productos.name;
-}
-public SearchGame(id) {
-  return this.productos.filter((juego) => { return juego.id == id })[0] || null;
-}
+
+
 public SearchCategory(id:number){
-  return id ? this.productos.filter(juego => {
-      return juego.categories.includes(id);
-  }) : this.productos;
+var producList = [];
+
+for(var i =0; i < this.productos.length; i++){
+  
+    var productRow = this.productos[i];
+
+    for(var j =0; j < productRow.products.length; j++){
+
+        var row = productRow.products[j];
+
+        for(var x =0; x < row.categories.length; x++){
+            
+            if(row.categories[x] == id){
+                producList.push(row);
+                break;
+            }
+        }
+
+    }
 }
 
-public BestSellerSearch(){
-  return this.productos.filter(juego => {
-      return juego.bestSeller;
-  }) 
+  return producList;
 }
 
-public buscarExhausted(){
-  return this.productos.filter(juego => {
-      return !juego.available;
-  }) 
+
+  public AvailableGame(available:boolean){
+  var availableList = [];
+  
+  for(var i =0; i < this.productos.length; i++){
+    
+      var productRow = this.productos[i];
+  
+      for(var j =0; j < productRow.products.length; j++){
+  
+          var row = productRow.products[j];
+          
+          if  (row.available == available){
+            availableList.push(row);
+          }
+      }
+  }
+
+  return availableList;
 }
-public buscaravailable(){
-  return this.productos.filter(juego => {
-      return juego.available;
-  }) 
+
+public SearchAll(){
+ return this.productos[0].products;
 }
+
+
+
+
+
 public higherPrice(){
   return this.productos.filter(juego => {
       return juego.price > 30000;

@@ -1,20 +1,57 @@
 <div class="container">
+  
     <div class = "container my-5">
     <div class="row">
+        
     <div class="col-md-4 col-lg-2" >
-       <button  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModal">Acción</button>
+       <button (click)="perra()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalAction">Acción</button>
          <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
+  <div class="modal fade" id="myModalAction" role="dialog">
+      <div class="modal-dialog" >
       
         <!-- Modal content-->
-        <div class="modal-content">
+        <div class="modal-content" >
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h4 class="modal-title">Lister Accion</h4>
           </div>
           <div class="modal-body">
-            <p>Some text in the modal.</p>
+            <h1> <strong>list of products by action</strong> </h1>
+          
+          
+            <div class="row">
+             
+                  <table class="table-responsive">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">id</th>
+                          <th scope="col">name</th>
+                          <th scope="col">available</th>
+                          <th scope="col">Best_Seller</th>
+                          <th scope="col">price</th>
+                          <th scope="col">image</th>
+                          <th scope="col">Description </th>
+                          <th scope="col">Buy</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                            
+                          <tr *ngFor="let item of productCategory">                                        
+                                          <td>{{item.id}}</td>
+                                          <td>{{item.name}}</td>
+                                          <td>{{(item.available) ? 'Disponible': 'No Disponible'}}</td>
+                                          <td>{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</td>
+                                          <td>{{item.price}}</td>
+                                          <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                          <td>{{item.description}}</td>
+                                          <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                        </tr>
+                    
+                      </tbody>
+                    </table>
+              
+            
+          </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -24,20 +61,52 @@
       </div>
     </div>
       </div>
+     
       <div class="col-md-4 col-lg-2" >
-          <button  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModal">Aventura</button>
+          <button (click)="puta()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalAventure">Aventure</button>
             <!-- Modal -->
-     <div class="modal fade" id="myModal" role="dialog">
-         <div class="modal-dialog">
+     <div class="modal fade" id="myModalAventure" role="dialog">
+         <div class="modal-dialog" >
          
            <!-- Modal content-->
-           <div class="modal-content">
+           <div class="modal-content" >
              <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal">&times;</button>
-               <h4 class="modal-title">Modal Header</h4>
+               <h4 class="modal-title">Lister Aventure</h4>
              </div>
              <div class="modal-body">
-               <p>Some text in the modal.</p>
+               <h1> <strong>list of products by Aventure</strong> </h1>
+             
+             
+               <div class="row">
+                
+                     <table class="table-responsive">
+                         <thead class="thead-dark">
+                           <tr>
+                             <th scope="col">name</th>
+                             <th scope="col">available</th>
+                             <th scope="col">Best_Seller</th>
+                             <th scope="col">price</th>
+                             <th scope="col">image</th>
+                             <th scope="col">Description </th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                                               
+                             <tr *ngFor="let item of productCategory">                                        
+                                             <td>{{item.name}}</td>
+                                             <td>{{(item.available) ? 'Disponible': 'No Disponible'}}</td>
+                                             <td>{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</td>
+                                             <td>{{item.price}}</td>
+                                             <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                             <td>{{item.description}}</td>
+                           </tr>
+                       
+                         </tbody>
+                       </table>
+                 
+               
+             </div>
              </div>
              <div class="modal-footer">
                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -48,19 +117,50 @@
        </div>
          </div>
          <div class="col-md-4 col-lg-2" >
-            <button  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModal">Conducción</button>
+            <button (click)="zorra()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalDriving">Driving</button>
               <!-- Modal -->
-       <div class="modal fade" id="myModal" role="dialog">
-           <div class="modal-dialog">
+       <div class="modal fade" id="myModalDriving" role="dialog">
+           <div class="modal-dialog" >
            
              <!-- Modal content-->
-             <div class="modal-content">
+             <div class="modal-content" >
                <div class="modal-header">
                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                 <h4 class="modal-title">Modal Header</h4>
+                 <h4 class="modal-title">Lister Driving</h4>
                </div>
                <div class="modal-body">
-                 <p>Some text in the modal.</p>
+                 <h1> <strong>list of products by Driving</strong> </h1>
+               
+               
+                 <div class="row">
+                  
+                       <table class="table-responsive">
+                           <thead class="thead-dark">
+                             <tr>
+                               <th scope="col">name</th>
+                               <th scope="col">available</th>
+                               <th scope="col">Best_Seller</th>
+                               <th scope="col">price</th>
+                               <th scope="col">image</th>
+                               <th scope="col">Description </th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                                                 
+                               <tr *ngFor="let item of productCategory">                                        
+                                               <td>{{item.name}}</td>
+                                               <td>{{(item.available) ? 'Disponible': 'No Disponible'}}</td>
+                                               <td>{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</td>
+                                               <td>{{item.price}}</td>
+                                               <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                               <td>{{item.description}}</td>
+                             </tr>
+                         
+                           </tbody>
+                         </table>
+                   
+                 
+               </div>
                </div>
                <div class="modal-footer">
                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -71,23 +171,55 @@
          </div>
            </div>
     </div>
-    </div>
+   
+    
     <div class = "container my-5">
         <div class="row">
         <div class="col-md-4 col-lg-2" >
-           <button  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModal">Desportes</button>
+           <button (click)="fresa()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalSport">Sport</button>
              <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
+      <div class="modal fade" id="myModalSport" role="dialog">
+          <div class="modal-dialog" >
           
             <!-- Modal content-->
-            <div class="modal-content">
+            <div class="modal-content" >
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">Lister Sport</h4>
               </div>
               <div class="modal-body">
-                <p>Some text in the modal.</p>
+                <h1> <strong>list of products by Sport</strong> </h1>
+              
+              
+                <div class="row">
+                 
+                      <table class="table-responsive">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col">name</th>
+                              <th scope="col">available</th>
+                              <th scope="col">Best_Seller</th>
+                              <th scope="col">price</th>
+                              <th scope="col">image</th>
+                              <th scope="col">Description </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                                                
+                              <tr *ngFor="let item of productCategory">                                        
+                                              <td>{{item.name}}</td>
+                                              <td>{{(item.available) ? 'Disponible': 'No Disponible'}}</td>
+                                              <td>{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</td>
+                                              <td>{{item.price}}</td>
+                                              <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                              <td>{{item.description}}</td>
+                            </tr>
+                        
+                          </tbody>
+                        </table>
+                  
+                
+              </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -98,19 +230,50 @@
         </div>
           </div>
           <div class="col-md-4 col-lg-2" >
-              <button  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModal">Aventura</button>
+              <button (click)="guayaba()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalStrategy">Strategy</button>
                 <!-- Modal -->
-         <div class="modal fade" id="myModal" role="dialog">
-             <div class="modal-dialog">
+         <div class="modal fade" id="myModalStrategy" role="dialog">
+             <div class="modal-dialog" >
              
                <!-- Modal content-->
-               <div class="modal-content">
+               <div class="modal-content" >
                  <div class="modal-header">
                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                   <h4 class="modal-title">Modal Header</h4>
+                   <h4 class="modal-title">Lister Strategy</h4>
                  </div>
                  <div class="modal-body">
-                   <p>Some text in the modal.</p>
+                   <h1> <strong>list of products by Strategy</strong> </h1>
+                 
+                 
+                   <div class="row">
+                    
+                         <table class="table-responsive">
+                             <thead class="thead-dark">
+                               <tr>
+                                 <th scope="col">name</th>
+                                 <th scope="col">available</th>
+                                 <th scope="col">Best_Seller</th>
+                                 <th scope="col">price</th>
+                                 <th scope="col">image</th>
+                                 <th scope="col">Description </th>
+                               </tr>
+                             </thead>
+                             <tbody>
+                                                   
+                                 <tr *ngFor="let item of productCategory">                                        
+                                                 <td>{{item.name}}</td>
+                                                 <td>{{(item.available) ? 'Disponible': 'No Disponible'}}</td>
+                                                 <td>{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</td>
+                                                 <td>{{item.price}}</td>
+                                                 <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                                 <td>{{item.description}}</td>
+                               </tr>
+                           
+                             </tbody>
+                           </table>
+                     
+                   
+                 </div>
                  </div>
                  <div class="modal-footer">
                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -121,19 +284,50 @@
            </div>
              </div>
              <div class="col-md-4 col-lg-2" >
-                <button  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModal">Estrategia</button>
+                <button (click)="mango()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalFight">Fight</button>
                   <!-- Modal -->
-           <div class="modal fade" id="myModal" role="dialog">
-               <div class="modal-dialog">
+           <div class="modal fade" id="myModalFight" role="dialog">
+               <div class="modal-dialog" >
                
                  <!-- Modal content-->
-                 <div class="modal-content">
+                 <div class="modal-content" >
                    <div class="modal-header">
                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                     <h4 class="modal-title">Modal Header</h4>
+                     <h4 class="modal-title">Lister Fight</h4>
                    </div>
                    <div class="modal-body">
-                     <p>Some text in the modal.</p>
+                     <h1> <strong>list of products by Fight</strong> </h1>
+                   
+                   
+                     <div class="row">
+                      
+                           <table class="table-responsive">
+                               <thead class="thead-dark">
+                                 <tr>
+                                   <th scope="col">name</th>
+                                   <th scope="col">available</th>
+                                   <th scope="col">Best_Seller</th>
+                                   <th scope="col">price</th>
+                                   <th scope="col">image</th>
+                                   <th scope="col">Description </th>
+                                 </tr>
+                               </thead>
+                               <tbody>
+                                                     
+                                   <tr *ngFor="let item of productCategory">                                        
+                                                   <td>{{item.name}}</td>
+                                                   <td>{{(item.available) ? 'Disponible': 'No Disponible'}}</td>
+                                                   <td>{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</td>
+                                                   <td>{{item.price}}</td>
+                                                   <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                                   <td>{{item.description}}</td>
+                                 </tr>
+                             
+                               </tbody>
+                             </table>
+                       
+                     
+                   </div>
                    </div>
                    <div class="modal-footer">
                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -148,28 +342,126 @@
        <div class = "container my-5">
           <div class = "row">
              <div class="col-sm-6"> 
-                <button  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModal">Disponibles</button>
+                <button (click)="lechoza()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalAvailable">Available</button>
                       <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-      
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
-          </div>
-          <div class="modal-body">
-            <p>Some text in the modal.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        
-      </div>
-    </div>
+                      <div class="modal fade" id="myModalAvailable" role="dialog">
+                          <div class="modal-dialog" >
+                          
+                            <!-- Modal content-->
+                            <div class="modal-content" >
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Lister Available</h4>
+                              </div>
+                              <div class="modal-body">
+                                <h1> <strong>list of products by Available</strong> </h1>
+                              
+                              
+                                <div class="row">
+                                 
+                                      <table class="table-responsive">
+                                          <thead class="thead-dark">
+                                            <tr>
+                                              <th scope="col">name</th>
+                                              
+                                              <th scope="col">Best_Seller</th>
+                                              <th scope="col">price</th>
+                                              <th scope="col">image</th>
+                                              <th scope="col">Description </th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                                                
+                                              <tr *ngFor="let item of productCategory">                                        
+                                                              <td>{{item.name}}</td>
+                                                              <td>{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</td>
+                                                              <td>{{item.price}}</td>
+                                                              <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                                              <td>{{item.description}}</td>
+                                            </tr>
+                                        
+                                          </tbody>
+                                        </table>
+                                  
+                                
+                              </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
               </div>
+              
+
+
+
+
+
+              
+                     <div class="col-sm-6"> 
+                        <button (click)="nepe()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalcarrito" img src="/assets/img/uno.jpg">carito</button>
+                              <!-- Modal -->
+          <div class="modal fade" id="myModalcarrito" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Carrito de compras</h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="row">
+                                 
+                          <table class="table-responsive">
+                              <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">id</th>
+
+                                  <th scope="col">name</th>
+                                  
+                                  <th scope="col">Best_Seller</th>
+                                  <th scope="col">price</th>
+                                  <th scope="col">image</th>
+                                  <th scope="col">Description </th>
+                                  <th scope="col">Eliminar </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                                    
+                                  <tr *ngFor="let item of shop">                                        
+                                                  <td>{{item.id}}</td>
+                                                  <td>{{item.name}}</td>
+                                                  <td>{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</td>
+                                                  <td>{{item.price}}</td>
+                                                  <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                                  <td>{{item.description}}</td>
+                                                  <td><button type="button" class="btn btn-success" (click)="deleteItem(item.id)">Delete</button></td>
+                                </tr>
+                            
+                              </tbody>
+                            </table>
+                      
+                    
+                  </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+                      </div>
+        
+                 
+
+
+
+
 
           </div>
        </div>

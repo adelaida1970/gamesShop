@@ -11,7 +11,7 @@ export class TodosComponent implements OnInit {
   juegos=null;
   constructor( private jefechuopelo:HeroService) { }
   ngOnInit() {
-    this.juegos = this.jefechuopelo.getGame();
+    
   }
 
 }

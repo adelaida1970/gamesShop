@@ -17,3 +17,7 @@
     background:-moz-linear-gradient(top,#cbe10a, #b86609);
     background: linear-gradient(top,#e1dd0a, #b86609);
 }
+.modal-dialog.modal-800 {
+    width: 800px;
+    margin: 30px auto;
+}
