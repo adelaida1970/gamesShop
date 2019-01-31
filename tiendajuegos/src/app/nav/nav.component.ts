@@ -10,11 +10,16 @@ export class NavComponent implements OnInit {
 
   productCategory: any;
   shop: any=[];
-
+  listAll: any[];
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
+    this.newMethod();
+    this.listAll = this.heroService.SearchAll();
+  }
 
+  private newMethod() {
+    this.mayor();
   }
 
   perra()
@@ -45,8 +50,16 @@ export class NavComponent implements OnInit {
   lechoza(){
     this.productCategory = this.heroService.AvailableGame(true);
   }
-  
+  parchita(){
+    this.productCategory = this.heroService.AvailableGame(false);
+  }
+
+    mayor(){
+    this.productCategory = this.heroService.higherPrice();
+
+  }
  
+
   
 nepe(id:number){
   let article = this.productCategory.find(a=>a.id == id);
@@ -61,7 +74,7 @@ deleteItem(id:number){
       break;
     }
   }
-  console.log(this.shop);
+
 }
 
 }

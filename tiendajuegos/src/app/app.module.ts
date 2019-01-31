@@ -10,7 +10,8 @@ import { TestComponent } from './test/test.component';
 import { CategoryComponent } from './category/category.component';
 import { AviableComponent } from './aviable/aviable.component';
 import { TodosComponent } from './todos/todos.component';
-
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,10 @@ import { TodosComponent } from './todos/todos.component';
     BrowserModule,
     AppRoutingModule,
     BrowserModule,
+    AutoCompleteModule,
     // import HttpClientModule after BrowserModule.
-    AppRoutingModule
-    
+    AppRoutingModule,
+    DataTablesModule
     
   ],
  
