@@ -9,7 +9,7 @@ import { HeroService } from '../hero.service';
 export class TodosComponent implements OnInit {
   
   juegos=null;
-  constructor( private jefechuopelo:HeroService) { }
+  constructor( private o:HeroService) { }
   ngOnInit() {
     
   }
