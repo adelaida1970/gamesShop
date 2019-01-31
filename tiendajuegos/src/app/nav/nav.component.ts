@@ -23,17 +23,17 @@ export class NavComponent implements OnInit {
     this.mayor();
   }
 
-  perra()
+  accion()
   {
     this.productCategory = this.heroService.SearchCategory(1);
    
   }
 
-  puta()
+  aventura()
   {
     this.productCategory = this.heroService.SearchCategory(2);
   }
-  zorra(){
+  conducir(){
     this.productCategory = this.heroService.SearchCategory(3);
   }
   fresa(){
