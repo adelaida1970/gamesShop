@@ -11,6 +11,7 @@ export class NavComponent implements OnInit {
   productCategory: any;
   shop: any=[];
   listAll: any[];
+  title:string = "aventure"
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
@@ -58,7 +59,10 @@ export class NavComponent implements OnInit {
     this.productCategory = this.heroService.higherPrice();
 
   }
- 
+  menor(){
+    this.productCategory = this.heroService.menorPrice();
+
+  }
 
   
 nepe(id:number){

@@ -7,31 +7,34 @@ export class CategoriesService {
 
   
 
-  categories:any = [
-    {
-        "id": 1,
-        "name": "Acción"
-    },
-    {
-        "id": 2,
-        "name": "Aventura"
-    },       
-    {
-        "id": 3,
-        "name": "Conducción"
-    },
-    {
-        "id": 4,
-        "name": "Deportes"
-    },
-    {
-        "id": 5,
-        "name": "Estrategia"
-    },
-    {
-        "id": 6,
-        "name": "Lucha"
-    }
+  categories:any = [{
+    "categories": [
+        {
+            "id": 1,
+            "name": "A la Parrilla"
+        },
+        {
+            "id": 2,
+            "name": "A la Plancha"
+        },       
+        {
+            "id": 3,
+            "name": "Hot Dogs"
+        },
+        {
+            "id": 4,
+            "name": "Bebidas"
+        },
+        {
+            "id": 5,
+            "name": "Postres"
+        },
+        {
+            "id": 6,
+            "name": "Ensaladas"
+        }
+    ] }
+    
 ]
 
 public getCategorias(){
