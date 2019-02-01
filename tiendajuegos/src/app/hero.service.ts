@@ -402,7 +402,7 @@ var Priceb = [];
                var qprice= mprice.products[n].price;
                
              if (parseFloat(qprice) > 30000){
-                console.log(qprice);
+             
                Priceb.push(mprice.products[n]);
                  }
 

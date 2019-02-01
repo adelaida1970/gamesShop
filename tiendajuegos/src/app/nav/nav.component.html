@@ -1,714 +1,736 @@
-
 <div class="container">
-      <div class="row">
-          <div class="col-lg-6">
-                <div class = "container my-5">
-    <div class="row">
-        
-       <div class="col-sm-4" >
-       <button (click)="accion()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Action</button>
-         <!-- Modal -->
-         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-      
-        <!-- Modal content-->
-        <div class="modal-content" >
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Lister {{title}}</h4>
-          </div>
-          <div class="modal-body">
-            <h1> <strong>list of products by action</strong> </h1>
-          
-          
-            <div class="row">
-             <div class="table-responsive">
-                  <table class="table">
-                      <thead class="thead-dark">
-                        <tr>
-                          <th scope="col">id</th>
-                          <th scope="col">name</th>
-                          <th scope="col">available</th>
-                          <th scope="col">Best_Seller</th>
-                          <th scope="col">price</th>
-                          <th scope="col">image</th>
-                          <th scope="col">Description </th>
-                          <th scope="col">Buy</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                                            
-                          <tr *ngFor="let item of productCategory">                                        
-                                          <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                          <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                          <td><h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6></td>
-                                          <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                          <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                          <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                          <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                          <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-                        </tr>
-                    
-                      </tbody>
-                    </table>
-                  </div>
-          </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-       </div>
-     
-        <div class="col-sm-4" >
-        <button (click)="aventura()"   class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Aventure</button>
-          <!-- Modal -->
-          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal-lg">
-       
-         <!-- Modal content-->
-         <div class="modal-content" >
-           <div class="modal-header">
-             <button type="button" class="close" data-dismiss="modal">&times;</button>
-             <h4 class="modal-title">Lister Aventure</h4>
-           </div>
-           <div class="modal-body">
-             <h1> <strong>list of products by Aventure</strong> </h1>
-           
-           
-             <div class="row">
-              <div class="table-responsive">
-                   <table class="table">
-                       <thead class="thead-dark">
-                         <tr>
-                           <th scope="col">id</th>
-                           <th scope="col">name</th>
-                           <th scope="col">available</th>
-                           <th scope="col">Best_Seller</th>
-                           <th scope="col">price</th>
-                           <th scope="col">image</th>
-                           <th scope="col">Description </th>
-                           <th scope="col">Buy</th>
-                         </tr>
-                       </thead>
-                       <tbody>
-                                             
-                           <tr *ngFor="let item of productCategory">                                        
-                                           <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                           <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                           <td><h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6></td>
-                                           <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                           <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                           <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                           <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                           <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-                         </tr>
-                     
-                       </tbody>
-                     </table>
-                   </div>
-           </div>
-           </div>
-           <div class="modal-footer">
-             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-           </div>
-         </div>
-         
-       </div>
-     </div>
-        </div>
-        <div class="col-sm-4" >
-        <button (click)="conducir()"    class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Driving</button>
-          <!-- Modal -->
-          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal-lg">
-       
-         <!-- Modal content-->
-         <div class="modal-content" >
-           <div class="modal-header">
-             <button type="button" class="close" data-dismiss="modal">&times;</button>
-             <h4 class="modal-title">Lister Driving</h4>
-           </div>
-           <div class="modal-body">
-             <h1> <strong>list of products by Driving</strong> </h1>
-           
-           
-             <div class="row">
-              <div class="table-responsive">
-                   <table class="table">
-                       <thead class="thead-dark">
-                         <tr>
-                           <th scope="col">id</th>
-                           <th scope="col">name</th>
-                           <th scope="col">available</th>
-                           <th scope="col">Best_Seller</th>
-                           <th scope="col">price</th>
-                           <th scope="col">image</th>
-                           <th scope="col">Description </th>
-                           <th scope="col">Buy</th>
-                         </tr>
-                       </thead>
-                       <tbody>
-                                             
-                           <tr *ngFor="let item of productCategory">                                        
-                                           <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                           <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                           <td><h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6></td>
-                                           <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                           <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                           <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                           <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                           <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-                         </tr>
-                     
-                       </tbody>
-                     </table>
-                   </div>
-           </div>
-           </div>
-           <div class="modal-footer">
-             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-           </div>
-         </div>
-         
-       </div>
-     </div>
-        </div>
-    </div>
-               </div>
-
-                <div class = "container my-5">
-        <div class="row">
-          <div class="col-sm-4" >
-            <button (click)="fresa()"    class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Sport</button>
-              <!-- Modal -->
-              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-               <div class="modal-dialog modal-lg">
-           
-             <!-- Modal content-->
-             <div class="modal-content" >
-               <div class="modal-header">
-                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                 <h4 class="modal-title">Lister Sport</h4>
-               </div>
-               <div class="modal-body">
-                 <h1> <strong>list of products by Sport</strong> </h1>
-               
-               
-                 <div class="row">
-                  <div class="table-responsive">
-                       <table class="table">
-                           <thead class="thead-dark">
-                             <tr>
-                               <th scope="col">id</th>
-                               <th scope="col">name</th>
-                               <th scope="col">available</th>
-                               <th scope="col">Best_Seller</th>
-                               <th scope="col">price</th>
-                               <th scope="col">image</th>
-                               <th scope="col">Description </th>
-                               <th scope="col">Buy</th>
-                             </tr>
-                           </thead>
-                           <tbody>
-                                                 
-                               <tr *ngFor="let item of productCategory">                                        
-                                               <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                               <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                               <td><h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6></td>
-                                               <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                               <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                               <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                               <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                               <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-                             </tr>
-                         
-                           </tbody>
-                         </table>
-                       </div>
-               </div>
-               </div>
-               <div class="modal-footer">
-                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-               </div>
-             </div>
-             
-           </div>
-         </div>
-           </div>
-           <div class="col-sm-4" >
-            <button (click)="guayaba()"    class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Strategy</button>
-              <!-- Modal -->
-              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-               <div class="modal-dialog modal-lg">
-           
-             <!-- Modal content-->
-             <div class="modal-content" >
-               <div class="modal-header">
-                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                 <h4 class="modal-title">Lister Strategy</h4>
-               </div>
-               <div class="modal-body">
-                 <h1> <strong>list of products by Strategy</strong> </h1>
-               
-               
-                 <div class="row">
-                  <div class="table-responsive">
-                       <table class="table">
-                           <thead class="thead-dark">
-                             <tr>
-                               <th scope="col">id</th>
-                               <th scope="col">name</th>
-                               <th scope="col">available</th>
-                               <th scope="col">Best_Seller</th>
-                               <th scope="col">price</th>
-                               <th scope="col">image</th>
-                               <th scope="col">Description </th>
-                               <th scope="col">Buy</th>
-                             </tr>
-                           </thead>
-                           <tbody>
-                                                 
-                               <tr *ngFor="let item of productCategory">                                        
-                                               <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                               <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                               <td><h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6></td>
-                                               <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                               <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                               <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                               <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                               <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-                             </tr>
-                         
-                           </tbody>
-                         </table>
-                       </div>
-               </div>
-               </div>
-               <div class="modal-footer">
-                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-               </div>
-             </div>
-             
-           </div>
-         </div>
-           </div>
-           <div class="col-sm-4" >
-            <button (click)="mango()"    class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Fight</button>
-              <!-- Modal -->
-              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-               <div class="modal-dialog modal-lg">
-           
-             <!-- Modal content-->
-             <div class="modal-content" >
-               <div class="modal-header">
-                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                 <h4 class="modal-title">Lister Fight</h4>
-               </div>
-               <div class="modal-body">
-                 <h1> <strong>list of products by Fight</strong> </h1>
-               
-               
-                 <div class="row">
-                  <div class="table-responsive">
-                       <table class="table">
-                           <thead class="thead-dark">
-                             <tr>
-                               <th scope="col">id</th>
-                               <th scope="col">name</th>
-                               <th scope="col">available</th>
-                               <th scope="col">Best_Seller</th>
-                               <th scope="col">price</th>
-                               <th scope="col">image</th>
-                               <th scope="col">Description </th>
-                               <th scope="col">Buy</th>
-                             </tr>
-                           </thead>
-                           <tbody>
-                                                 
-                               <tr *ngFor="let item of productCategory">                                        
-                                               <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                               <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                               <td><h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6></td>
-                                               <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                               <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                               <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                               <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                               <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-                             </tr>
-                         
-                           </tbody>
-                         </table>
-                       </div>
-               </div>
-               </div>
-               <div class="modal-footer">
-                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-               </div>
-             </div>
-             
-           </div>
-         </div>
-           </div>
-        </div>
-                </div>
-
-                <div class = "container my-5">
-          <div class = "row">
-            <div class="col-sm-6" >
-              <button (click)="lechoza()" class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Available</button>
-                <!-- Modal -->
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                 <div class="modal-dialog modal-lg">
-             
-               <!-- Modal content-->
-               <div class="modal-content" >
-                 <div class="modal-header">
-                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                   <h4 class="modal-title">Lister Available</h4>
-                 </div>
-                 <div class="modal-body">
-                   <h1> <strong>list of products by Available</strong> </h1>
-                 
-                 
-                   <div class="row">
-                    <div class="table-responsive">
-                         <table class="table">
-                             <thead class="thead-dark">
-                               <tr>
-                                 <th scope="col">id</th>
-                                 <th scope="col">name</th>
-                                 <th scope="col">available</th>
-                                 <th scope="col">Best_Seller</th>
-                                 <th scope="col">price</th>
-                                 <th scope="col">image</th>
-                                 <th scope="col">Description </th>
-                                 <th scope="col">Buy</th>
-                               </tr>
-                             </thead>
-                             <tbody>
-                                                   
-                                 <tr *ngFor="let item of productCategory">                                        
-                                                 <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                                 <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                                 <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                                 <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                                 <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                                 <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                                 <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-                               </tr>
-                           
-                             </tbody>
-                           </table>
-                         </div>
-                 </div>
-                 </div>
-                 <div class="modal-footer">
-                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                 </div>
-               </div>
-               
-             </div>
-           </div>
-             </div>
-              
-             <div class="col-sm-6"> 
-              <button (click)="parchita()" class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Exhausted</button>
-              <!-- Modal -->
-              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-               <div class="modal-dialog modal-lg">
-           
-             <!-- Modal content-->
-             <div class="modal-content" >
-               <div class="modal-header">
-                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                 <h4 class="modal-title">Lister Exhausted</h4>
-               </div>
-               <div class="modal-body">
-                 <h1> <strong>list of products by Exhausted</strong> </h1>
-               
-               
-                 <div class="row">
-                  <div class="table-responsive">
-                       <table class="table">
-                           <thead class="thead-dark">
-                             <tr>
-                               <th scope="col">id</th>
-                               <th scope="col">name</th>
-                               <th scope="col">available</th>
-                               <th scope="col">Best_Seller</th>
-                               <th scope="col">price</th>
-                               <th scope="col">image</th>
-                               <th scope="col">Description </th>
-                               <th scope="col">Buy</th>
-                             </tr>
-                           </thead>
-                           <tbody>
-                                                 
-                               <tr *ngFor="let item of productCategory">                                        
-                                               <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                               <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                               <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                               <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                               <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                               <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                               <td><button type="button" class="btn btn-warning" >Exhausted</button></td>
-                             </tr>
-                         
-                           </tbody>
-                         </table>
-                       </div>
-               </div>
-               </div>
-               <div class="modal-footer">
-                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-               </div>
-             </div>
-             
-           </div>
-         </div>
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-          </div>
-                </div>
-
-                <div class = "container my-5">
-                       <div class = "row">
-                          <div class="col-sm-6"> 
-
-                <button (click)="mayor()" class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Price over 30000$</button>
-                <!-- Modal -->
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                 <div class="modal-dialog modal-lg">
-             
-               <!-- Modal content-->
-               <div class="modal-content" >
-                 <div class="modal-header">
-                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                   <h4 class="modal-title">Lister Available</h4>
-                 </div>
-                 <div class="modal-body">
-                   <h1> <strong>list of products by Available</strong> </h1>
-                 
-                 
-                   <div class="row">
-                    <div class="table-responsive">
-                         <table class="table">
-                             <thead class="thead-dark">
-                               <tr>
-                                 <th scope="col">id</th>
-                                 <th scope="col">name</th>
-                                 <th scope="col">available</th>
-                                 <th scope="col">Best_Seller</th>
-                                 <th scope="col">price</th>
-                                 <th scope="col">image</th>
-                                 <th scope="col">Description </th>
-                                 <th scope="col">Buy</th>
-                               </tr>
-                             </thead>
-                             <tbody>
-                                                   
-                                 <tr *ngFor="let item of productCategory">                                        
-                                                 <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                                 <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                                 <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                                 <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                                 <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                                 <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                                 <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-                               </tr>
-                           
-                             </tbody>
-                           </table>
-                         </div>
-                 </div>
-                 </div>
-                 <div class="modal-footer">
-                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                 </div>
-               </div>
-               
-             </div>
-           </div>
-                           </div>
-              
-            
-            
-                           <div class="col-sm-6"> 
-
-                            <button (click)="menor()" class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >less over 10000$</button>
-                            <!-- Modal -->
-                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                             <div class="modal-dialog modal-lg">
-                         
-                           <!-- Modal content-->
-                           <div class="modal-content" >
-                             <div class="modal-header">
-                               <button type="button" class="close" data-dismiss="modal">&times;</button>
-                               <h4 class="modal-title">Lister Available</h4>
-                             </div>
-                             <div class="modal-body">
-                               <h1> <strong>list of products by Available</strong> </h1>
-                             
-                             
-                               <div class="row">
+  <div class="row">
+     <div class="col-lg-6">
+        <div class = "container my-5">
+           <div class="row">
+              <div class="col-sm-4" >
+                 <button (click)="accion()"  class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Action</button>
+                 <!-- Modal -->
+                 <div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Action</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by action</strong> </h1>
+                             <div class="row">
                                 <div class="table-responsive">
-                                     <table class="table">
-                                         <thead class="thead-dark">
-                                           <tr>
-                                             <th scope="col">id</th>
-                                             <th scope="col">name</th>
-                                             <th scope="col">available</th>
-                                             <th scope="col">Best_Seller</th>
-                                             <th scope="col">price</th>
-                                             <th scope="col">image</th>
-                                             <th scope="col">Description </th>
-                                             <th scope="col">Buy</th>
-                                           </tr>
-                                         </thead>
-                                         <tbody>
-                                                               
-                                             <tr *ngFor="let item of productCategory">                                        
-                                                             <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                                                             <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                                                             <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                                                             <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                                                             <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                                             <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                                                             <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-                                           </tr>
-                                       
-                                         </tbody>
-                                       </table>
-                                     </div>
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
                              </div>
-                             </div>
-                             <div class="modal-footer">
-                               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                             </div>
-                           </div>
-                           
-                         </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
                        </div>
-                                       </div>
-                     </div>
-                
+                    </div>
                  </div>
-               </div>
-
-            <div class="col">
-            <div class = "container my-5">
-            <div class="col-sm-6"> 
-                <button (click)="nepe()"   class="unoss btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalcarrito" ><img src="/assets/img/107831.png" width="200" height="200"><strong>Shopping</strong></button>
-                      <!-- Modal -->
-  <div class="modal fade" id="myModalcarrito" role="dialog">
-      <div class="modal-dialog">
-      
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Carrito de compras</h4>
-          </div>
-          <div class="modal-body">
-              <div class="row">
-                         
-                  <table class="table-responsive">
-                      <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">id</th>
-
-                          <th scope="col">name</th>
-                          
-                          <th scope="col">Best_Seller</th>
-                          <th scope="col">price</th>
-                          <th scope="col">image</th>
-                          <th scope="col">Description </th>
-                          <th scope="col">Eliminar </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                                            
-                          <tr *ngFor="let item of shop">                                        
-                            <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                            <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                            <td><h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6></td>
-                            <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                            <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                                          
-                                          <td><button type="button" class="btn btn-success" (click)="deleteItem(item.id)">Delete</button></td>
-                        </tr>
-                    
-                      </tbody>
-                    </table>
-              
-            
-          </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+              </div>
+              <div class="col-sm-4" >
+                 <button (click)="aventura()"   class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Aventure</button>
+                 <!-- Modal -->
+                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Aventure</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by Aventure</strong> </h1>
+                             <div class="row">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-sm-4" >
+                 <button (click)="conducir()"    class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Driving</button>
+                 <!-- Modal -->
+                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Driving</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by Driving</strong> </h1>
+                             <div class="row">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </div>
-        
-      </div>
-    </div>
+        <div class = "container my-5">
+           <div class="row">
+              <div class="col-sm-4" >
+                 <button (click)="fresa()"    class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Sport</button>
+                 <!-- Modal -->
+                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Sport</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by Sport</strong> </h1>
+                             <div class="row">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
               </div>
-            </div>
+              <div class="col-sm-4" >
+                 <button (click)="guayaba()"    class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Strategy</button>
+                 <!-- Modal -->
+                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Strategy</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by Strategy</strong> </h1>
+                             <div class="row">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
               </div>
-      </div>
-      
-      <div class="table-responsive">
-  <table datatable class="row-border hover table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">id</th>
-        <th scope="col">name</th>
-        <th scope="col">Best_Seller</th>
-        <th scope="col">price</th>
-        <th scope="col">image</th>
-        <th scope="col">Description </th>
-        <th scope="col">Buy</th>
-      </tr>
-    </thead>
-    <tbody>
-                          
-        <tr *ngFor="let item of listAll">                                        
-                        <td><h1 style="font-size:15px;" >{{item.id}}</h1></td>
-                        <td><h6 style="font-size:11px;" >{{item.name}}</h6></td>
-                        <td><h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6></td>
-                        <td><h6 style="font-size:11px;">{{item.price}}</h6></td>
-                        <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
-                        <td><h6 style="font-size:9px;" >{{item.description}}</h6></td>
-                        <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
-      </tr>
-  
-    </tbody>
-  </table>
+              <div class="col-sm-4" >
+                 <button (click)="mango()"    class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Fight</button>
+                 <!-- Modal -->
+                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Fight</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by Fight</strong> </h1>
+                             <div class="row">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class = "container my-5">
+           <div class = "row">
+              <div class="col-sm-6" >
+                 <button (click)="lechoza()" class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Available</button>
+                 <!-- Modal -->
+                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Available</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by Available</strong> </h1>
+                             <div class="row">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-sm-6">
+                 <button (click)="parchita()" class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Exhausted</button>
+                 <!-- Modal -->
+                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Exhausted</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by Exhausted</strong> </h1>
+                             <div class="row">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-warning" >Exhausted</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class = "container my-5">
+           <div class = "row">
+              <div class="col-sm-6">
+                 <button (click)="mayor()" class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >Price over 30000$</button>
+                 <!-- Modal -->
+                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Available</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by Available</strong> </h1>
+                             <div class="row">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-sm-6">
+                 <button (click)="menor()" class="unoss" class="btn btn-secondary btn-block zoom m-2" data-toggle="modal" data-target=".bd-example-modal-lg" >less over 10000$</button>
+                 <!-- Modal -->
+                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                       <!-- Modal content-->
+                       <div class="modal-content" >
+                          <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <h4 class="modal-title">Lister Available</h4>
+                          </div>
+                          <div class="modal-body">
+                             <h1> <strong>list of products by Available</strong> </h1>
+                             <div class="row">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                      <thead class="thead-dark">
+                                         <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">available</th>
+                                            <th scope="col">Best_Seller</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">Description </th>
+                                            <th scope="col">Buy</th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <tr *ngFor="let item of productCategory">
+                                            <td>
+                                               <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                            </td>
+                                            <td>
+                                               <h6 style="font-size:11px;">{{item.price}}</h6>
+                                            </td>
+                                            <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                            <td>
+                                               <h6 style="font-size:9px;" >{{item.description}}</h6>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="col">
+        <div class = "container my-5">
+           <div class="col-sm-6">
+              <button (click)="nepe()"   class="unoss btn-secondary btn-block zoom m-2" data-toggle="modal" data-target="#myModalcarrito" ><img src="/assets/img/107831.png" width="200" height="200"><strong>Shopping</strong></button>
+              <!-- Modal -->
+              <div class="modal fade" id="myModalcarrito" role="dialog">
+                 <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                       <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Carrito de compras</h4>
+                       </div>
+                       <div class="modal-body">
+                          <div class="row">
+                             <table class="table-responsive">
+                                <thead class="thead-dark">
+                                   <tr>
+                                      <th scope="col">id</th>
+                                      <th scope="col">name</th>
+                                      <th scope="col">Best_Seller</th>
+                                      <th scope="col">price</th>
+                                      <th scope="col">image</th>
+                                      <th scope="col">Description </th>
+                                      <th scope="col">Eliminar </th>
+                                   </tr>
+                                </thead>
+                                <tbody>
+                                   <tr *ngFor="let item of shop">
+                                      <td>
+                                         <h1 style="font-size:15px;" >{{item.id}}</h1>
+                                      </td>
+                                      <td>
+                                         <h6 style="font-size:11px;" >{{item.name}}</h6>
+                                      </td>
+                                      <td>
+                                         <h6 style="font-size:11px;" >{{(item.available) ? 'Disponible': 'No Disponible'}}</h6>
+                                      </td>
+                                      <td>
+                                         <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+                                      </td>
+                                      <td>
+                                         <h6 style="font-size:11px;">{{item.price}}</h6>
+                                      </td>
+                                      <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+                                      <td><button type="button" class="btn btn-success" (click)="deleteItem(item.id)">Delete</button></td>
+                                   </tr>
+                                </tbody>
+                             </table>
+                          </div>
+                       </div>
+                       <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="table-responsive">
+     <table datatable class="row-border hover table">
+        <thead class="thead-dark">
+           <tr>
+              <th scope="col">id</th>
+              <th scope="col">name</th>
+              <th scope="col">Best_Seller</th>
+              <th scope="col">price</th>
+              <th scope="col">image</th>
+              <th scope="col">Description </th>
+              <th scope="col">Buy</th>
+           </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let item of listAll">
+              <td>
+                 <h1 style="font-size:15px;" >{{item.id}}</h1>
+              </td>
+              <td>
+                 <h6 style="font-size:11px;" >{{item.name}}</h6>
+              </td>
+              <td>
+                 <h6 style="font-size:11px;" >{{(item.bestSeller) ? 'Mas Vendido': 'Menos Vendido'}}</h6>
+              </td>
+              <td>
+                 <h6 style="font-size:11px;">{{item.price}}</h6>
+              </td>
+              <td><img src="{{item.img}}"  width="100px" height="100px"> </td>
+              <td>
+                 <h6 style="font-size:9px;" >{{item.description}}</h6>
+              </td>
+              <td><button type="button" class="btn btn-success" (click)="nepe(item.id)">Buy</button></td>
+           </tr>
+        </tbody>
+     </table>
+  </div>
 </div>
-</div>
- 
-   
-    
