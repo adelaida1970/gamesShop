@@ -65,13 +65,13 @@ export class NavComponent implements OnInit {
   }
 
   
-nepe(id:number){
-  let article = this.productCategory.find(a=>a.id == id);
+nepe(id){
+  var article = this.productCategory.find(a=>a.id == id);
   this.shop.push(article);
   console.log(this.shop);
 }
 
-deleteItem(id:number){
+deleteItem(id){
   for(var i = 0; i <this.shop.length;i++){
     if(this.shop[i].id == id){
       this.shop.splice(i,1);
